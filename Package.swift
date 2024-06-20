@@ -17,6 +17,7 @@ let package = Package(
             targets: ["FireKit"]),
     ], 
     dependencies: [
+        .package(url: "https://github.com/apple/swift-docc-plugin", from: "1.0.0"),
         .package(url: "https://github.com/firebase/firebase-ios-sdk", from: "10.24.0")
     ],
     targets: [
