@@ -18,3 +18,4 @@ It is assumed that the the app has been properly setup with Firebase.
 This package contains multiple classes desired to make commonly created logic easier.
 
 -  <doc:Firestore>
+-  <doc:Storage>

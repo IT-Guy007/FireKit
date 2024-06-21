@@ -6,7 +6,7 @@ import PackageDescription
 let package = Package(
     name: "FireKit",
     platforms: [
-        .macOS(.v11),
+        .macOS(.v13),
         .iOS(.v16),
         .watchOS(.v8),
         .visionOS(.v1),
@@ -18,14 +18,17 @@ let package = Package(
     ], 
     dependencies: [
         .package(url: "https://github.com/apple/swift-docc-plugin", from: "1.0.0"),
-        .package(url: "https://github.com/firebase/firebase-ios-sdk", from: "10.24.0")
+        .package(url: "https://github.com/firebase/firebase-ios-sdk", from: "10.24.0"),
+        .package(url: "https://github.com/onevcat/KingFisher", from: "7.11.0")
     ],
     targets: [
         .target(
             name: "FireKit",
             dependencies: [
                 .product(name: "FirebaseCrashlytics", package: "firebase-ios-sdk"),
-                .product(name: "FirebaseFirestore", package: "firebase-ios-sdk")
+                .product(name: "FirebaseFirestore", package: "firebase-ios-sdk"),
+                .product(name: "FirebaseStorage", package: "firebase-ios-sdk"),
+                .product(name: "Kingfisher", package: "Kingfisher")
             ]
         ),
         .testTarget(

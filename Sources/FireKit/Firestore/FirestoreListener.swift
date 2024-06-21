@@ -6,6 +6,7 @@
 //
 
 import Combine
+import FirebaseCrashlytics
 import Foundation
 import OSLog
 import SwiftUI
